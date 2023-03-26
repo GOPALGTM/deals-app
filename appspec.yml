@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: .
-    destination: /home/ubuntu/project
+  - source: /
+    destination: /var/www/html/
 permissions:
   - object: /home/ubuntu/project
     owner: root
