@@ -9,6 +9,6 @@ permissions:
     group: ubuntu
 hooks:
   BeforeInstall:
-    - location: ./scripts/deploy.sh
+    - location: /home/ubuntu/project/scripts/deploy.sh
       timeout: 300
       runas: ubuntu
