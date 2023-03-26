@@ -1,6 +1,6 @@
 version: 0.0
 os: linux
-files: 
+files:
   - source: /
     destination: /home/ubuntu/project
 permissions:
@@ -9,6 +9,6 @@ permissions:
     group: ubuntu
 hooks:
   BeforeInstall:
-      - location: ./scripts/deploy.sh
-        timeout: 300
-        runas: ubuntu
+    - location: ./scripts/deploy.sh
+      timeout: 300
+      runas: ubuntu
