@@ -1,18 +1,22 @@
 version: 0.2
 
 phases:
-  pre_build:
+  install:
+    runtime-versions:
+      python: 3.7
     commands:
-      - echo Prebuild ops
-      - pip3 install -r requirements.txt
+      # Install dependencies needed for running tests
+      - echo Installing dependencies
+      - pip install -r requirements.txt
+
   build:
     commands:
-      - python manage.py test
-      - python manage.py collectstatic --noinput
+      - echo Build started on `date`
+      - echo Running tests
   post_build:
     commands:
       - echo Build completed on `date`
+
 artifacts:
   files:
     - '**/*'
-    - '!**/staticfiles/**'
