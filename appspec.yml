@@ -3,6 +3,7 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/project
+    exclude: ["^/opt/codedeploy-agent/"] # exclude default path
 permissions:
   - object: /home/ubuntu/project
     owner: ubuntu
