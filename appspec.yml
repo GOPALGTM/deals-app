@@ -2,13 +2,13 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu
+    destination: /home/ubuntu/project
 permissions:
-  - object: /home/ubuntu
+  - object: /home/ubuntu/project
     owner: ubuntu
     group: ubuntu
 hooks:
   BeforeInstall:
-    - location:  /opt/codedeploy-agent/deployment-root/bc06667d-d6db-4317-acf9-f6c1af1d7f4c/d-HHF2G60CM/deployment-archive/scripts/deploy.sh
+    - location: ./scripts/deploy.sh
       timeout: 300
       runas: ubuntu
