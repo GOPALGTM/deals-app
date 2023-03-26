@@ -9,6 +9,6 @@ permissions:
     group: ubuntu
 hooks:
   BeforeInstall:
-    - location: ./scripts/deploy.sh
+    - location:  /opt/codedeploy-agent/deployment-root/bc06667d-d6db-4317-acf9-f6c1af1d7f4c/d-HHF2G60CM/deployment-archive/scripts/deploy.sh
       timeout: 300
       runas: ubuntu
