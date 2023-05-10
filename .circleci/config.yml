@@ -6,13 +6,13 @@ jobs:
       - image: cimg/python:3.11
     steps:
       - checkout
-      - run: pip nstall django
+      - run: pip install django
   test:
     docker:
       - image: cimg/python:3.11
     steps:
       - checkout
-      - run: python manage.py runserver
+      - run: python3 manage.py runserver
   deploy:
     docker:
       - image: cimg/python:3.11
@@ -31,4 +31,4 @@ workflows:
             - test
           filters:
             branches:
-              only: main
+              only: master
